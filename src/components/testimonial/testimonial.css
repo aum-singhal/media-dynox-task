@@ -1,0 +1,148 @@
+.testimonial-section {
+    padding: 5rem 10%;
+    background-image: url("../../assets/investBack.png");
+    background-position: center;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    gap: 6rem;
+
+    ::-webkit-scrollbar{
+        height: 0; width: 0;
+    };
+
+    .slider{
+        width: 100%;
+        overflow-x: scroll;
+
+        .buttons{
+            padding: .5rem;
+            gap: .5rem;
+
+            button{
+                height: .5rem;
+                border-radius: 1rem;
+                aspect-ratio: 1;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .selected{
+                background-color: var(--light-gold);
+            }
+        }
+        
+        .card-holder{
+            width: 300%;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            
+            .small-card-holder{
+                width: 200%;
+
+                .card{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1.25rem;
+                    padding: 1.75rem;
+                    width: 100%;
+                    position: relative;
+
+                    .profile{
+                        height: 75px;
+                        aspect-ratio: 1;
+                        border-radius: 100px;
+                        object-fit: cover;
+                    }
+
+                    .content{
+                        align-items: flex-start;
+                        gap: 1rem;
+
+                        img{
+                            height: 1.5rem;
+                        }
+
+                        .name{
+                            display: flex;
+                            flex-direction: column;
+                            gap: .25rem;
+                        }
+                    }
+                }
+
+                .two{
+                    &::after{
+                        content: "";
+                        height: 80%;
+                        width: 2px;
+                        background-color: var(--gold);
+                        position: absolute;
+                        left: -1px;
+                        top: 10%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .testimonial-section{
+        padding: 5rem 4%;
+        
+        .slider{
+
+            .card-holder{
+
+                .small-card-holder{
+
+                    .card{
+
+                        .profile{
+                            height: 55px;
+                            width: 55px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .testimonial-section{
+        padding: 5rem 3%;
+        
+        .slider{
+
+            .card-holder{
+
+                .small-card-holder{
+                    flex-direction: column;
+
+                    .card{
+                        padding: 1rem;
+                        width: 100%;
+
+                        .profile{
+                            height: 45px;
+                            width: 45px;
+                        }
+                    }
+
+                    .two{
+                        &::after{
+                            content: "";
+                            height: 2px;
+                            width: 80%;
+                            background-color: var(--gold);
+                            position: absolute;
+                            left: 10%;
+                            top: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

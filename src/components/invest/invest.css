@@ -1,0 +1,142 @@
+.invest-section{
+    background-image: url("../../assets/investBack.png");
+    background-size: 70% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 3.5rem;
+    padding: 5rem 10%;
+
+    .font-40{
+        display: flex;
+        gap: .5rem;
+    }
+
+    .content{
+        gap: 2.5rem;
+
+        .card-holder{
+            justify-content: space-around;
+            gap: 1rem;
+
+        
+            .card{
+
+                .card-card{
+                    min-width: 290px;
+                    max-width: 350px;
+                    background-color: #1A1A1A;
+                    border-radius: .5rem;
+                    padding: 3rem 2rem;
+                    gap: 1rem;
+                    position: relative;
+                    cursor: default;
+                    min-height: 300px;
+    
+                    .font-22{
+                        color: #EDBF6F;
+                    }
+    
+                    .font-18{
+                        color: #7D7D7D;
+                    }
+    
+                    .line{
+                        width: 95%;
+                        position: absolute;
+                        bottom: .25rem;
+                        height: 1px;
+                        background-color: #E9BD66;
+                        left: 2.5%;
+                    }
+    
+                    &:hover{
+                        transform: scale(1.05);
+    
+                        .line{
+                            width: 75%;
+                            left: 12.5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .invest-section{
+        padding: 5rem 5%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .invest-section{
+
+        .content{
+
+            .card-holder{
+                flex-wrap: wrap;
+                justify-content: center !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .invest-section{
+        padding: 3rem 4%;
+        gap: 2rem;
+
+        .content{
+
+            .card-holder{
+                flex-wrap: wrap !important;
+                gap: 1.5rem;
+                justify-content: center;
+
+                .card{
+
+                    .line{
+                        left: 10%;
+                        width: 80%;
+                    }
+
+                    &:hover{
+                        transform: scale(1);
+
+                        .line{
+                            width: 80%;
+                            left: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .invest-section{
+
+        .content{
+
+            .card-holder{
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                justify-content: center;
+
+                .card{
+
+                    line{
+                        left: 2.5%;
+                        width: 95%;
+                    }
+
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

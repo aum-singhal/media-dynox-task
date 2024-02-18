@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.App{
+  font-family: "Noto Serif", serif;
+  color: #CACACA;
+
+  .header{
+    position: absolute;
+    padding: 1rem 4%;
+    width: 100%;
+
+    .nav-responsive{
+      display: none;
+    }
+
+    .nav-items{
+      gap: 2rem;
+
+      .close{
+        display: none;
+      }
+
+      .item{
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+        padding: .25rem;
+        
+        &::after{
+          transition: .3s;
+          background-color: #FEB564;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0.3rem;
+          height: 1px;
+          width: 0px;
+        }
+
+        &:hover{
+
+          &::after{
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.outlined-button{
+  height: 3rem;
+  width: 200px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  border: 1px solid var(--gold);
+  border-radius: .25rem;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+    width: 101%;
+    height: 100%;
+    color: var(--gold);
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+  }
+  
+  .mas {
+    position: absolute;
+    color: black;
+    text-align: center;
+    width: 101%;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    top: 0;
+  }
+
+  &:hover{
+    transform: scale(1.05);
+    .button{
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
+    }
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+   -webkit-mask-position: 0 0;
+   mask-position: 0 0;
+  }
+ 
+  to {
+   -webkit-mask-position: 100% 0;
+   mask-position: 100% 0;
+  }
+ }
+ 
+ @keyframes ani {
+  from {
+   -webkit-mask-position: 0 0;
+   mask-position: 0 0;
+  }
+ 
+  to {
+   -webkit-mask-position: 100% 0;
+   mask-position: 100% 0;
+  }
+ }
+
+@-webkit-keyframes ani2 {
+  from {
+   -webkit-mask-position: 100% 0;
+   mask-position: 100% 0;
+  }
+ 
+  to {
+   -webkit-mask-position: 0 0;
+   mask-position: 0 0;
+  }
+ }
+
+ @keyframes ani2 {
+  from {
+   -webkit-mask-position: 100% 0;
+   mask-position: 100% 0;
+  }
+ 
+  to {
+   -webkit-mask-position: 0 0;
+   mask-position: 0 0;
+  }
+ }
+
+.dark-gradient{
+  background: -webkit-linear-gradient(#FFE998, #57370D);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-gradient{
+  background: -webkit-linear-gradient(#F2F2F21A, #E3B955, #C59B4F, #C59B4F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-color{color: var(--gold);}
+.color-7d7d7d{color: #7d7d7d;}
+
+.font-noto-serif{font-family: "Noto Serif", serif;}
+.font-inter{font-family: "Inter", sans-serif;}
+.font-roboto{font-family: "Roboto", sans-serif;}
+
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.text-justify{text-align: justify;}
+
+.text-title{text-transform: capitalize;}
+.text-upper{text-transform: uppercase;}
+
+.light-bold{font-weight: 300;}
+.regular-bold{font-weight: 400;}
+.medium-bold{font-weight: 500;}
+.semi-bold{font-weight: 600;}
+.bold{font-weight: 700;}
+.extra-bold{font-weight: 900;}
+
+.cursor-pointer{cursor: pointer;}
+
+.flex{display: flex;}
+.flex-d-col{display: flex; flex-direction: column;}
+.flex-a-cen{display: flex; align-items: center;}
+.flex-j-cen{display: flex; justify-content: center;}
+.flex-a-cen-j-cen{display: flex; align-items: center; justify-content: center;}
+.flex-a-cen-j-spbet{display: flex; align-items: center; justify-content: space-between;}
+
+.font-10{font-size: .625rem;}
+.font-12{font-size: 0.75rem;}
+.font-14{font-size: 0.875rem;}
+.font-16{font-size: 1rem;}
+.font-18{font-size: 1.125rem}
+.font-20{font-size: 1.25rem}
+.font-22{font-size: 1.375rem}
+.font-24{font-size: 1.5rem}
+.font-26{font-size: 1.625rem}
+.font-28{font-size: 1.75rem}
+.font-30{font-size: 1.875rem}
+.font-32{font-size: 2rem;}
+.font-36{font-size: 2.25rem}
+.font-40{font-size: 2.5rem;}
+.font-48{font-size: 3rem}
+.font-50{font-size: 3.125rem}
+.font-60{font-size: 3.75rem;}
+.font-72{font-size: 4.5rem;}
+
+@media screen and (max-width: 1024px) {
+  .font-10{font-size: .625rem;}
+  .font-12{font-size: 0.75rem;}
+  .font-14{font-size: 0.875rem;}
+  .font-16{font-size: 1rem;}
+  .font-18{font-size: 1.125rem}
+  .font-20{font-size: 1.125rem}
+  .font-22{font-size: 1.25rem}
+  .font-24{font-size: 1.5rem}
+  .font-26{font-size: 1.625rem}
+  .font-28{font-size: 1.75rem}
+  .font-30{font-size: 1.8rem}
+  .font-32{font-size: 1.875remrem;}
+  .font-36{font-size: 2.125rem}
+  .font-40{font-size: 2.25rem;}
+  .font-48{font-size: 2.75rem}
+  .font-50{font-size: 2.875rem}
+  .font-60{font-size: 3.25rem;}
+  .font-72{font-size: 4rem;}
+}
+
+@media screen and (max-width: 770px) {
+  .App{
+
+    .header{
+      z-index: 5;
+
+      .nav-responsive{
+        display: block;
+      }
+
+      .collapsed{
+        display: none;
+      }
+
+      .non-collapsed{
+        display: flex;
+        position: absolute !important;
+        right: 0;
+        top: 0;
+        height: 100svh;
+        width: 100svw;
+        background-color: black;
+        z-index: 5 !important;
+        padding: 1.5rem;
+        gap: 1.5rem !important;
+        flex-direction: column;
+
+        .close{
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .App{
+
+    .header{
+
+      img{
+        height: 3rem
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.service-section{
+    background-image: url("../../assets/serviceBack.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #00000099;
+    background-blend-mode: multiply;
+    padding: 7rem 27%;
+    gap: 4rem;
+
+    .service-buttons{
+        gap: 2rem;
+
+        .individual, .corporate{
+            background-color: var(--light-gold);
+            width: 380px;
+            padding: 1.25rem 0;
+            display: flex;
+            justify-content: center;
+            color: #080808;
+            height: fit-content !important;
+            cursor: default;
+
+            span{
+                color: var(--dark-gold)
+            }
+            
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .service-section{
+        padding: 6rem 18%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .service-section{
+
+        .service-buttons{
+
+            .individual, .corporate{
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-section{
+
+        .service-buttons{
+            flex-direction: column;
+            .individual, .corporate{
+                width: 280px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

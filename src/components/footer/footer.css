@@ -1,0 +1,57 @@
+.footer{
+  padding: 7rem 7%;
+  justify-content: space-between;
+
+  .item{
+    max-width: 30%;
+  }
+
+  .flex-d-col{
+    gap: .25rem;
+  }
+
+  .flex-a-cen{
+    gap: 1.5rem;
+  }
+
+  .one{
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
+  .two, .three, .four{
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .footer{
+
+    .one{
+
+      img{
+        height: 45px;
+      }
+    }
+
+    .two, .three, .four{
+      padding-top: .5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer{
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+
+    .one{
+      max-width: 100% !important;
+    }
+
+    .two, .three, .four{
+      max-width: fit-content;
+    }
+  }
+}

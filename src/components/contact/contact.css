@@ -1,0 +1,145 @@
+.contact-section{
+    background-image: url("../../assets/contactBack.jpeg");
+    background-color: #010101df;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem 10%;
+
+    .contact{
+        
+        .left{
+            width: 40%;
+        }
+
+        .left{
+            gap: 3rem;
+
+            .contact-details{
+                gap: 1rem;
+
+                .item{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    svg{
+                        color: #F8CC42;
+                    }
+                }
+            }
+        }
+
+        .right{
+            position: relative;
+            aspect-ratio: 1;
+            width: 35%;
+
+            .image{
+                position: absolute;
+                width: 100%;
+                aspect-ratio: 1;
+                overflow: hidden;
+                transition: .5s;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .three{
+                z-index: 1;
+                opacity: .3;
+                cursor: pointer;
+            }
+
+            .two{
+                z-index: 2;
+                top: 1rem;
+                left: 1.5rem;
+                opacity: .6;
+                cursor: pointer;
+            }
+
+            .one{
+                z-index: 3;
+                top: 2rem;
+                left: 3rem;
+            }
+        }
+    }
+
+    .sponsor{
+        padding: 1rem 2rem;
+        background-color: #DAA74E;
+        position: relative;
+        top: 8rem;
+
+        .font-30{
+            color: #8C6013;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .contact-section{
+        padding: 5rem 7%;
+    }
+}
+
+@media  screen and (max-width: 770px) {
+    .contact-section{
+        padding: 3rem 5%;
+
+        .contact{
+
+            .left{
+                width: 55%;
+            }
+
+            .right{
+                width: 37%;
+    
+                .two{
+                    top: 1.5rem;
+                    left: 1rem;
+                }
+
+                .one{
+                    top: 3rem;
+                    left: 2rem;
+                }
+            }
+        }
+
+        .sponsor{
+            flex-wrap: wrap;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-section{
+
+        .contact{
+
+            .left{
+                width: 100%;
+            }
+
+            .right{
+                display: none;
+            }
+        }
+
+        .sponsor{
+            top: 6rem;
+        }
+    }
+}
